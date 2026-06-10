@@ -1,0 +1,28 @@
+using System;
+
+namespace ConsoleApp
+{
+    public class Program
+    {
+        // Global variable
+        public static int grandTotal = 0;
+
+        public static void AddSale(int price, int quantity)
+        {
+            // Local variables
+            int saleTotal = price * quantity;
+
+            // Update global total
+            grandTotal += saleTotal;
+        }
+
+        public static void Main(string[] args)
+        {
+            AddSale(10, 5);   // 10 * 5 = 50
+            AddSale(20, 6);   // 20 * 6 = 120
+            AddSale(15, 5);   // 15 * 5 = 75
+
+            Console.WriteLine("Grand total: " + grandTotal); // 50 + 120 + 75 = 245
+        }
+    }
+}
