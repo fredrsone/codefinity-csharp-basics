@@ -1,0 +1,20 @@
+using System;
+
+namespace ConsoleApp
+{
+    public class Program
+    {
+        public static double ConvertToFahrenheit(double celsius)
+        {
+            double fahrenheit = celsius * 9 / 5 + 32;
+            return fahrenheit;
+        }
+
+        public static void Main(string[] args)
+        {
+            double tempC = 25; // Celsius
+            double tempF = ConvertToFahrenheit(tempC);
+            Console.WriteLine(tempC + "°C is " + tempF + "°F");
+        }
+    }
+}
